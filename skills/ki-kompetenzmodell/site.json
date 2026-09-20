@@ -1,0 +1,15 @@
+{
+  "titel": "KI-Kompetenzmodell",
+  "kategorie": "Mitarbeitende entwickeln",
+  "reihenfolge": 10,
+  "kurzbeschreibung": "Baut ein rollenbasiertes Kompetenzmodell mit Stufen von der Anwendung bis zur Gestaltung von KI-Lösungen.",
+  "einleitung": "Der Skill führt Claude durch den Aufbau eines KI-Kompetenzmodells für deine Organisation. Du erhältst eine Matrix, die pro Rolle beschreibt, welche KI-Fähigkeiten auf welcher Stufe gefragt sind.",
+  "punkte": [
+    "Klärt Rollen, Ziele und den heutigen Kenntnisstand im Gespräch",
+    "Ordnet Kompetenzen vier Stufen zu, von den Grundlagen bis zum Gestalten",
+    "Formuliert beobachtbare Verhaltensanker pro Stufe"
+  ],
+  "du_gibst": "Rollen der Organisation, strategische Ziele, heutiger Kenntnisstand",
+  "du_erhaeltst": "Kompetenzmatrix pro Rolle mit Stufenbeschreibungen",
+  "beispielauftrag": "Erstelle ein KI-Kompetenzmodell für die Rollen in Vertrieb, Kundenservice und Finanz."
+}
