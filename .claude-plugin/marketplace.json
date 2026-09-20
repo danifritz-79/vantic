@@ -1,1 +1,14 @@
+{
+  "name": "vantic",
+  "owner": {
+    "name": "Vantic"
+  },
+  "plugins": [
+    {
+      "name": "vantic-skills",
+      "source": "./",
+      "description": "Claude Skills von Vantic für KI-Kompetenzen, Organisationsentwicklung und neue Jobprofile."
+    }
+  ]
+}
 
