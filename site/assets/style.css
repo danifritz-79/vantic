@@ -109,14 +109,15 @@ p { margin: 0; }
 .how h3 { font-size: 24px; font-weight: 600; }
 .how p { font-size: 17px; line-height: 1.55; color: var(--muted); }
 
-/* Über uns */
+/* Über mich */
 .about { background: var(--green); }
-.about-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 72px; align-items: start; padding-top: 88px; padding-bottom: 88px; }
+.about-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr); column-gap: 56px; align-items: center; padding-top: 88px; padding-bottom: 88px; }
+.about-photo { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 4px rgba(226, 176, 74, 0.35); }
 .about h2 { font-size: 42px; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF; }
 .about p { font-size: 19px; line-height: 1.6; color: #D9E5DC; max-width: 34em; margin-top: 18px; }
-.about h3 { font-size: 24px; font-weight: 600; color: #FFFFFF; }
-.about a { color: var(--gold); font-family: var(--sans); font-size: 20px; font-weight: 600; min-height: 44px; display: flex; align-items: center; margin-top: 14px; }
-.about a:focus-visible { outline-color: var(--gold); }
+.about-linkedin { margin-top: 24px; border-color: var(--gold); color: var(--gold); }
+.about-linkedin:hover { background: rgba(226, 176, 74, 0.12); }
+.about-linkedin:focus-visible { outline-color: var(--gold); }
 
 .site-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; padding-bottom: 48px; font-family: var(--sans); font-size: 15px; color: #4B5750; }
 .site-footer nav { display: flex; gap: 24px; }
@@ -143,7 +144,8 @@ p { margin: 0; }
   .detail h3 { font-size: 30px; }
   .io { grid-template-columns: minmax(0, 1fr); }
   .how { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .about-grid { grid-template-columns: minmax(0, 1fr); row-gap: 32px; padding-top: 56px; padding-bottom: 56px; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); row-gap: 24px; padding-top: 56px; padding-bottom: 56px; justify-items: center; text-align: center; }
+  .about p { margin-left: auto; margin-right: auto; }
   .site-footer { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
