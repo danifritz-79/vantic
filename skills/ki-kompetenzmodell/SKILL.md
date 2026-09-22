@@ -16,8 +16,8 @@ Gehe die Schritte der Reihe nach durch. Stelle pro Nachricht höchstens fünf Fr
 1. **Discovery, Ausgangslage klären.** Frage nach Branche, Grösse der Organisation, strategischen Zielen mit KI und dem heutigen Kenntnisstand (zum Beispiel vorhandene Schulungen, genutzte Werkzeuge, bekannte Vorbehalte). Frage auch, warum KI-Kompetenzen aufgebaut werden sollen (zum Beispiel Effizienz, Innovation, Wettbewerbsdruck, Compliance). Frage nach dem Branchenkontext, um zu verstehen, was regulatorische Anforderungen, typische Anwendungsfälle und der Reifegrad der Branche in Sachen KI sind.
 2. **Assessment, Skill-Level-Analyse.** Lass dir die Rollen oder Rollengruppen nennen, für die das Modell gelten soll. Empfiehl, mit drei bis sieben Rollengruppen zu beginnen, statt jede Stelle einzeln zu betrachten. Welche KI-Skills braucht welche Rolle (zum Beispiel Marketing braucht Prompt-Engineering, IT braucht ML-Grundlagen)?
 3. **Kompetenzfelder wählen, Kompetenzmodell entwickeln.** Lies `references/kompetenzstufen.md`. Schlage die dort beschriebenen fünf Kompetenzfelder vor, und passe sie an, wenn die Organisation andere Schwerpunkte hat. Halte die Zahl der Felder klein.
-4. **Sollstufen pro Rolle bestimmen.** Ordne jeder Rolle für jedes Kompetenzfeld eine Sollstufe von 1 bis 4 zu. Begründe jede Einstufung in einem Satz, und bitte um Korrektur, wo die Person anderer Meinung ist.
-5. **Lernpfade und Formate gestalten.**
+4. **Sollstufen pro Rolle bestimmen.** Zeige der Person zuerst die vier Kompetenzstufen aus `references/kompetenzstufen.md` mit einer Kurzbeschreibung von ein bis zwei Sätzen pro Stufe, bevor du nach Einstufungen fragst. Ohne diese Übersicht weiss die Person nicht, wogegen sie einstuft, und die Antworten werden unscharf. Ordne danach jeder Rolle für jedes Kompetenzfeld eine Sollstufe von 1 bis 4 zu. Begründe jede Einstufung in einem Satz, und bitte um Korrektur, wo die Person anderer Meinung ist.
+5. **Lernpfade und Formate gestalten.** Frage zuerst, wie viel Zeit pro Woche die Zielgruppe realistisch neben ihrem Pensum für Weiterbildung aufwenden kann, das steuert, welche Formate infrage kommen. Lies dann `references/weiterbildungsangebote.md`, und leite für jede Rolle konkrete Empfehlungen ab, die zur Distanz zwischen Ist- und Sollstufe passen: ein bis zwei Angebote pro Rolle, mit Anbieter, Link, Format, ungefährer Dauer, ungefähren Kosten und ungefährem Lernaufwand pro Woche. Weise darauf hin, dass Kosten und Kursdaten sich ändern können und vor einer Budgetplanung zu prüfen sind. Erfinde keine Anbieter oder Preise, die nicht in der Referenzdatei stehen, wenn die Referenzdatei keine passenden Angebote für die Branche oder Region der Organisation enthält, sag das offen. Die fünf Formatkategorien als Orientierung:
 	1. **Blended Learning:** kurze E-Learnings, Workshops und Praxisprojekte ("Learning by doing")
 	2. **Micro-Learning:** kurze Module statt langer Schulungen (bessere Adaption)
 	3. **Sandbox-Umgebungen:** sicherer Raum zum Ausprobieren ohne Produktionsrisiko
@@ -31,6 +31,7 @@ Gehe die Schritte der Reihe nach durch. Stelle pro Nachricht höchstens fünf Fr
 ## Grundsätze
 
 - Arbeite mit den Angaben der Person. Erfinde keine Zahlen zur Organisation, und kennzeichne Annahmen ausdrücklich als Annahmen.
+- Stütze Empfehlungen zu externen Weiterbildungen ausschliesslich auf `references/weiterbildungsangebote.md`. Erfinde keine zusätzlichen Anbieter, Links, Preise oder Dauern.
 - Halte das Modell schlank. Eine Matrix, die niemand liest, hilft nicht.
 - Trenne Kompetenz von Werkzeug. Beschreibe, was jemand können soll, nicht, welches Produkt er bedienen soll.
 - Antworte auf Deutsch in Schweizer Rechtschreibung (ohne Eszett), es sei denn, die Person wünscht etwas anderes.

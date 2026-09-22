@@ -2,15 +2,15 @@
   "titel": "KI-Kompetenzmodell",
   "kategorie": "Mitarbeitende entwickeln",
   "reihenfolge": 10,
-  "kurzbeschreibung": "Baut ein rollenbasiertes Kompetenzmodell mit fünf Kompetenzfeldern, passenden Lernpfaden und einem Monitoring für die Weiterentwicklung.",
-  "einleitung": "Der Skill führt Claude von der Ausgangslage über eine Kompetenzmatrix bis zu Lernpfaden pro Rolle. Du erhältst eine vollständige Matrix mit Sollstufen, Verhaltensankern, passenden Lernformaten und einem Vorschlag, wie das Modell laufend aktuell gehalten wird.",
+  "kurzbeschreibung": "Baut ein rollenbasiertes Kompetenzmodell mit fünf Kompetenzfeldern, konkreten externen Weiterbildungsempfehlungen und einem Monitoring für die Weiterentwicklung.",
+  "einleitung": "Der Skill führt Claude von der Ausgangslage über eine Kompetenzmatrix bis zu Lernpfaden pro Rolle. Du erhältst eine vollständige Matrix mit Sollstufen, Verhaltensankern und je Rolle konkreten externen Angeboten mit Link, Kosten, Dauer und Lernaufwand, sowie einen Vorschlag, wie das Modell laufend aktuell gehalten wird.",
   "punkte": [
     "Klärt Branche, strategische Ziele und den heutigen Kenntnisstand im Gespräch",
-    "Ordnet Kompetenzen in fünf Feldern vier Stufen zu, von den Grundlagen bis zum Gestalten",
-    "Schlägt passende Lernformate pro Rolle vor, von Micro-Learning bis CAS, DAS oder MAS",
+    "Zeigt die vier Kompetenzstufen, bevor Sollstufen pro Rolle festgelegt werden",
+    "Empfiehlt konkrete externe Weiterbildungen mit Link, Kosten, Dauer und Lernaufwand neben 100% Pensum",
     "Empfiehlt ein Monitoring mit Re-Assessments und Feedback-Loops für die Weiterentwicklung"
   ],
-  "du_gibst": "Branche, Rollen der Organisation, strategische Ziele, heutiger Kenntnisstand",
-  "du_erhaeltst": "Kompetenzmatrix pro Rolle mit Stufenbeschreibungen, Lernpfaden und Monitoring-Vorschlag",
-  "beispielauftrag": "Erstelle ein KI-Kompetenzmodell für die Rollen in Vertrieb, Kundenservice und Finanz, inklusive Lernpfaden."
+  "du_gibst": "Branche, Rollen der Organisation, strategische Ziele, heutiger Kenntnisstand, verfügbare Lernzeit pro Woche",
+  "du_erhaeltst": "Kompetenzmatrix pro Rolle mit Stufenbeschreibungen, konkreten Weiterbildungsempfehlungen samt Link, Kosten und Dauer, sowie einem Monitoring-Vorschlag",
+  "beispielauftrag": "Erstelle ein KI-Kompetenzmodell für die Rollen in Vertrieb, Kundenservice und Finanz, inklusive konkreter Weiterbildungsempfehlungen."
 }
