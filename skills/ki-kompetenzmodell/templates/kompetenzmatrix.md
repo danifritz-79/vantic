@@ -7,6 +7,15 @@ Geltungsbereich: [Rollengruppen]
 
 Kurze Zusammenfassung in drei bis fünf Sätzen: Ziel des Modells, gewählte Kompetenzfelder, wichtigste Erkenntnis aus der Einstufung.
 
+## Stufenlegende
+
+1, Verstehen: kennt Grundbegriffe und Grenzen, nutzt freigegebene Werkzeuge für einfache Aufgaben.
+2, Anwenden: setzt KI regelmässig und selbständig in den eigenen Aufgaben ein.
+3, Gestalten: entwickelt Arbeitsabläufe mit KI und befähigt andere im Team.
+4, Verantworten: steuert den Einsatz von KI in einem Bereich oder in der Organisation.
+
+Ausführliche Beschreibungen und Verhaltensanker: `references/kompetenzstufen.md`.
+
 ## Matrix (Sollstufen 1 bis 4)
 
 | Rolle | KI-Verständnis | Anwendung im Arbeitsalltag | Urteilsvermögen und Qualitätssicherung | Verantwortung und Regeln | Zusammenarbeit und Veränderung |
@@ -20,14 +29,30 @@ Kurze Zusammenfassung in drei bis fünf Sätzen: Ziel des Modells, gewählte Kom
 
 ## Lernpfade und Formate pro Rolle
 
-Ordne jeder Rolle die passenden Lernformate zu und begründe die Wahl kurz. Eine Rolle kann mehrere Formate kombinieren.
+Verfügbare Lernzeit der Zielgruppe: [zum Beispiel 1 bis 2 Stunden pro Woche neben 100% Pensum]
 
-| Rolle | Blended Learning | Micro-Learning | Sandbox-Umgebung | Peer-Learning und Communities | Vertiefte Weiterbildung (CAS/DAS/MAS) | Begründung |
-|---|---|---|---|---|---|---|
-| [Rolle 1] | [Ja/Nein] | [Ja/Nein] | [Ja/Nein] | [Ja/Nein] | [Ja/Nein] | [Kurzbegründung] |
-| [Rolle 2] | [Ja/Nein] | [Ja/Nein] | [Ja/Nein] | [Ja/Nein] | [Ja/Nein] | [Kurzbegründung] |
+Für jede Rolle: Abstand zwischen Ist- und Sollstufe, passende Formate und ein bis zwei konkrete externe Angebote aus `references/weiterbildungsangebote.md`, mit Link, Kosten, Dauer und Lernaufwand. Ergänze interne Massnahmen, wo sie den Weg abkürzen oder vertiefen.
+
+**[Rolle 1]**
+- Weg: [Kompetenzfeld], Stufe [Ist] zu Stufe [Soll]
+- Empfohlene Formate: [zum Beispiel Micro-Learning, dann Sandbox-Übung]
+- Externe Angebote:
+  - [Kursname] ([Anbieter]), [Link] — Format: [Online/Präsenz], Dauer: [z. B. 5 Stunden oder 1 Tag], Kosten: [z. B. kostenlos oder CHF X], Lernaufwand: [z. B. 1 Stunde pro Woche]
+  - [Kursname] ([Anbieter]), [Link] — Format: …, Dauer: …, Kosten: …, Lernaufwand: …
+- Geschätzte Durchlaufzeit bis zur Sollstufe: [z. B. 2 bis 3 Monate bei 1 bis 2 Stunden pro Woche]
+- Interne Massnahmen: [z. B. Sandbox-Zugang, Praxisprojekt, Mentoring durch eine KI-Champion oder einen KI-Champion]
+
+**[Rolle 2]**
+- Weg: …
+- Empfohlene Formate: …
+- Externe Angebote:
+  - …
+- Geschätzte Durchlaufzeit bis zur Sollstufe: …
+- Interne Massnahmen: …
 
 **KI-Champions:** [Wer aus welcher Rolle eignet sich als interne Multiplikatorin oder interner Multiplikator, und welche Aufgabe übernimmt diese Person im Peer-Learning?]
+
+Hinweis: Kosten und Kursdaten sind Schätzungen mit Stand der Referenzdatei, vor einer Budgetplanung beim Anbieter prüfen.
 
 ## Verhaltensanker
 
