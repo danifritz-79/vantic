@@ -108,6 +108,6 @@
 }
 .site-nav a { white-space: nowrap; }
 @media (max-width: 600px) {
-  .site-header img { height: 52px; }
+  .site-header img { height: 36px; }
   .site-nav .nav-optional { display: none; }
 }
