@@ -1,6 +1,7 @@
 {
   "titel": "KI-Kompetenzmodell",
   "kategorie": "Mitarbeitende entwickeln",
+  "ebene": "mensch",
   "reihenfolge": 10,
   "kurzbeschreibung": "Baut ein rollenbasiertes Kompetenzmodell mit fünf Kompetenzfeldern, konkreten externen Weiterbildungsempfehlungen und einem Monitoring für die Weiterentwicklung.",
   "einleitung": "Der Skill führt Claude von der Ausgangslage über eine Kompetenzmatrix bis zu Lernpfaden pro Rolle. Du erhältst eine vollständige Matrix mit Sollstufen, Verhaltensankern und je Rolle konkreten externen Angeboten mit Link, Kosten, Dauer und Lernaufwand, sowie einen Vorschlag, wie das Modell laufend aktuell gehalten wird.",

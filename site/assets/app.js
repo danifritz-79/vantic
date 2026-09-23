@@ -1,7 +1,13 @@
 (function () {
   'use strict';
 
-  var PALETTE = ['#D6A02C', '#3FA37A', '#2E9BB5', '#C46F4E', '#8A7FD1'];
+  // Die drei Vantic-Ebenen. Farben aufgehellt, damit sie auf dunklen Karten sichtbar sind.
+  var EBENEN = {
+    strategie: { farbe: '#9AA1A8', name: 'Strategie und Technologie' },
+    organisation: { farbe: '#6FA58C', name: 'Organisation und Prozesse' },
+    mensch: { farbe: '#E2B04A', name: 'Mensch und Kultur' }
+  };
+  var PALETTE = ['#E2B04A', '#6FA58C', '#9AA1A8'];
   var state = { data: null, filter: 'alle', selected: null, install: false };
 
   var chipsEl = document.getElementById('chips');
@@ -26,14 +32,15 @@
     return node;
   }
 
-  function color(category) {
+  function color(category, ebene) {
+    if (ebene && EBENEN[ebene]) return EBENEN[ebene].farbe;
     var index = state.data.kategorien.indexOf(category);
     return PALETTE[(index < 0 ? 0 : index) % PALETTE.length];
   }
 
-  function dot(category) {
+  function dot(category, ebene) {
     var d = h('span', { class: 'dot', 'aria-hidden': 'true' });
-    d.style.background = color(category);
+    d.style.background = color(category, ebene);
     return d;
   }
 
@@ -140,7 +147,7 @@
         }
       }, [
         h('span', { class: 'card-body' }, [
-          h('span', { class: 'cat' }, [dot(s.kategorie), h('span', { text: s.kategorie })]),
+          h('span', { class: 'cat' }, [dot(s.kategorie, s.ebene), h('span', { text: s.kategorie })]),
           h('span', { class: 'card-title', text: s.titel }),
           h('span', { class: 'card-text', text: s.kurzbeschreibung })
         ]),
@@ -181,7 +188,7 @@
     detailEl.hidden = false;
 
     detailEl.appendChild(h('div', { class: 'block' }, [
-      h('div', { class: 'cat' }, [dot(s.kategorie), h('span', { text: s.kategorie })]),
+      h('div', { class: 'cat' }, [dot(s.kategorie, s.ebene), h('span', { text: s.kategorie + (EBENEN[s.ebene] ? ', Ebene ' + EBENEN[s.ebene].name : '') })]),
       h('h3', { text: s.titel }),
       h('p', { class: 'lead', text: s.einleitung })
     ]));

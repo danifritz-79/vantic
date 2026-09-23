@@ -110,4 +110,5 @@
 @media (max-width: 600px) {
   .site-header img { height: 36px; }
   .site-nav .nav-optional { display: none; }
+  .site-header { gap: 16px; }
 }

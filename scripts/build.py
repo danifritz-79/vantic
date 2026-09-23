@@ -98,6 +98,7 @@ def build_skill(folder):
         "titel": meta.get("titel") or folder.name.replace("-", " ").title(),
         "kategorie": meta.get("kategorie") or "Weitere Skills",
         "reihenfolge": meta.get("reihenfolge", 1000),
+        "ebene": meta.get("ebene", ""),
         "kurzbeschreibung": meta.get("kurzbeschreibung") or shorten(description),
         "einleitung": meta.get("einleitung") or description,
         "punkte": meta.get("punkte", []),

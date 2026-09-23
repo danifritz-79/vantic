@@ -37,6 +37,7 @@ config.json           Name, GitHub-Adresse und Plugin-Name für die Installation
    |---|---|
    | `titel` | Name auf der Karte |
    | `kategorie` | Gruppe für den Filter, neue Kategorien entstehen automatisch |
+   | `ebene` | `strategie`, `organisation` oder `mensch`, bestimmt die Farbe des Punkts (Anthrazit, Dunkelgrün, Gold) |
    | `reihenfolge` | Zahl, kleinere Zahlen stehen weiter oben |
    | `kurzbeschreibung` | Ein bis zwei Sätze für die Karte |
    | `einleitung` | Ausführlicher Text in der Detailansicht |
