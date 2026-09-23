@@ -13,7 +13,7 @@ skills/
     site.json         Angaben für die Webseite
     references/       Hintergrundwissen, das Claude bei Bedarf liest
     templates/        Vorlagen für die Ergebnisse
-site/                 Vorlage der Webseite (index.html, Stil, Schriften, Logo)
+site/                 Webseite: index.html (Einstiegsseite), skills/index.html (Skills-Seite), Stil, Schriften, Logo
 scripts/build.py      Baut die Webseite und die Zip-Dateien
 config.json           Name, GitHub-Adresse und Plugin-Name für die Installationsbefehle
 .github/workflows/    Automatische Veröffentlichung

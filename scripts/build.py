@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = ROOT / "skills"
 SITE_DIR = ROOT / "site"
 DIST = ROOT / "dist"
+SKILLS_OUT = DIST / "skills"  # Skills-Seite, skills.json und Downloads liegen unter /skills
 IGNORE = {"site.json", ".DS_Store", "Thumbs.db"}
 
 
@@ -84,7 +85,7 @@ def build_skill(folder):
     files = collect_files(folder)
 
     # Zip: Der Ordner heisst im Zip wie der Skill, damit Claude ihn direkt erkennt.
-    downloads = DIST / "downloads"
+    downloads = SKILLS_OUT / "downloads"
     downloads.mkdir(parents=True, exist_ok=True)
     zip_path = downloads / f"{folder.name}.zip"
     with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
@@ -132,7 +133,8 @@ def main():
         if s["kategorie"] not in categories:
             categories.append(s["kategorie"])
 
-    (DIST / "skills.json").write_text(
+    SKILLS_OUT.mkdir(parents=True, exist_ok=True)
+    (SKILLS_OUT / "skills.json").write_text(
         json.dumps({"config": config, "kategorien": categories, "skills": skills}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
