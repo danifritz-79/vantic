@@ -2,6 +2,8 @@
 
 **Für 12 bis 14 Förmchen von ca. 6 cm Durchmesser**
 
+#Vegetarisch #Dessert
+
 **Zutaten**
 
 **Teig**
