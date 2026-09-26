@@ -2,6 +2,8 @@
 
 **Für 4 Personen**
 
+#Vegetarisch
+
 **Zutaten**
 
 **Pastateig**
