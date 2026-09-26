@@ -2,7 +2,7 @@
 
 **Für 4 Personen**
 
-#Vegetarisch
+#Vegetarisch #Vorspeise #Hauptgang
 
 **Zutaten**
 
