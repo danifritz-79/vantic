@@ -2,6 +2,8 @@
 
 **Für 2 Personen**
 
+#Vegetarisch #Vorspeise
+
 **Zutaten**
 
 **Suppenbasis**
