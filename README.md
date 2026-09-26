@@ -13,8 +13,9 @@ skills/
     site.json         Angaben für die Webseite
     references/       Hintergrundwissen, das Claude bei Bedarf liest
     templates/        Vorlagen für die Ergebnisse
-site/                 Webseite: index.html (Einstiegsseite), skills/index.html (Skills-Seite), Stil, Schriften, Logo
-scripts/build.py      Baut die Webseite und die Zip-Dateien
+rezepte/              Ein .md-File pro Rezept, im Format des rezept-creator Skills
+site/                 Webseite: index.html (Einstiegsseite), skills/index.html (Skills-Seite), rezepte/index.html (private Rezeptseite), Stil, Schriften, Logo
+scripts/build.py      Baut die Webseite, die Zip-Dateien und die Rezeptseite
 config.json           Name, GitHub-Adresse und Plugin-Name für die Installationsbefehle
 .github/workflows/    Automatische Veröffentlichung
 .claude-plugin/       Ermöglicht die Installation in Claude Code
@@ -47,6 +48,16 @@ config.json           Name, GitHub-Adresse und Plugin-Name für die Installation
    | `beispielauftrag` | Ein Beispielsatz für Claude |
 
 4. Lade den Ordner auf GitHub hoch. Nach ein bis zwei Minuten ist der Skill auf der Webseite sichtbar. Den Fortschritt siehst du im Reiter "Actions".
+
+## Neues Rezept hinzufügen
+
+Die Seite `/rezepte` ist nirgends verlinkt und nur über den direkten Link erreichbar (siehe `site/rezepte/index.html`, `<meta name="robots" content="noindex, nofollow">`).
+
+1. Lass ein Rezept mit dem `rezept-creator` Skill erstellen. Ergänze am Skill die Anweisung, nach der Personenzahl eine Zeile mit ein oder mehreren Hashtags aus dieser Liste einzufügen: `#vorspeise`, `#sauce`, `#dessert`, `#vegetarisch`. Weitere Hashtags sind möglich, der Filter auf der Webseite entsteht automatisch aus allen vorkommenden Hashtags.
+2. Speichere das Rezept als `.md`-Datei im Ordner `rezepte/`, Dateiname beliebig (z. B. `basilikum-pesto.md`).
+3. Lade die Datei auf GitHub hoch. Nach ein bis zwei Minuten erscheint das Rezept automatisch auf `/rezepte`, inklusive Filter, keine Anpassung am Code nötig.
+
+Der Build erwartet dieselbe Gliederung, die der `rezept-creator` Skill erzeugt: einen Titel (`#` oder `##`), eine fett gesetzte Zeile "Für X Personen", danach `**Zutaten**` und `**Zubereitung**`, je mit fett gesetzten Teilkomponenten-Titeln, und optional `**Notiz**` am Schluss.
 
 Fehlt die `site.json`, erscheint der Skill trotzdem, mit Standardwerten. Ist die `SKILL.md` fehlerhaft, wird der Skill übersprungen, und im Protokoll der Action steht eine Warnung.
 
