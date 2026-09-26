@@ -30,7 +30,8 @@ body { margin: 0; background: var(--papier); color: var(--tinte); font-family: v
 .inhalt a { font-family: var(--sans); font-weight: 600; color: var(--akzent); text-decoration: none; font-size: 0.95rem; }
 .inhalt a:hover { text-decoration: underline; }
 
-.keine-treffer { text-align: center; color: var(--gedaempft); font-style: italic; margin-bottom: 40px; }
+.keine-treffer, .hinweis { text-align: center; color: var(--gedaempft); font-style: italic; margin-bottom: 40px; }
+.hinweis code { font-style: normal; background: var(--karte); border: 1px solid var(--linie); border-radius: 4px; padding: 1px 6px; }
 
 .rezept { background: var(--karte); border: 1px solid var(--linie); border-radius: 14px; padding: 32px clamp(20px, 5vw, 40px); margin-bottom: 32px; scroll-margin-top: 24px; }
 .rezept h2 { font-family: var(--sans); font-weight: 600; font-size: 1.6rem; margin: 0 0 4px; }
@@ -41,6 +42,8 @@ body { margin: 0; background: var(--papier); color: var(--tinte); font-family: v
 @media (max-width: 640px) { .rezept-grid { grid-template-columns: 1fr; gap: 20px; } }
 
 .rezept h3 { font-family: var(--sans); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--akzent); margin: 0 0 12px; }
+.zutaten h4, .zubereitung h4 { font-family: var(--sans); font-weight: 600; font-size: 0.92rem; color: var(--tinte); margin: 16px 0 6px; }
+.zutaten h4:first-child, .zubereitung h4:first-child { margin-top: 0; }
 .zutaten ul, .zubereitung ol { margin: 0; padding-left: 20px; }
 .zutaten li, .zubereitung li { margin-bottom: 6px; }
 .notiz { margin-top: 16px; font-size: 0.9rem; color: var(--gedaempft); font-style: italic; }
