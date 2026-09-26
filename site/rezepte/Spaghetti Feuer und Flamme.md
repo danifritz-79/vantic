@@ -4,6 +4,8 @@
 
 für 4 Personen
 
+#Vegetarisch
+
 150g Mascarpone
 3 Bund Frühlingszwiebeln
 3 frische Chilis scharf
