@@ -4,7 +4,7 @@
 
 für 4 Personen
 
-#Vegetarisch
+#Vegetarisch #Hauptgang
 
 150g Mascarpone
 3 Bund Frühlingszwiebeln
