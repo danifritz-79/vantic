@@ -9,22 +9,28 @@
 </head>
 <body>
 
-<header class="wrap kopf">
+<header class="wrap-breit kopf">
   <h1>Rezepte</h1>
   <p class="kopf-text">Eine private Sammlung, nicht Teil der Vantic Webseite und nirgends verlinkt.</p>
 </header>
 
-<main class="wrap">
+<main class="wrap-breit">
   <div class="filter" id="filter" role="group" aria-label="Rezepte filtern" hidden></div>
-  <nav class="inhalt" id="inhalt" aria-label="Rezeptübersicht" hidden></nav>
   <p class="hinweis" id="leer" hidden>Noch keine Rezepte vorhanden. Lade eine .md-Datei in den Ordner <code>rezepte</code> im Repository hoch, die Seite zeigt sie nach dem nächsten Build automatisch an.</p>
   <p class="hinweis" id="keine-treffer" hidden>Kein Rezept mit dieser Kombination von Filtern.</p>
-  <div id="rezepte-liste"></div>
+  <div class="grid" id="grid"></div>
 </main>
 
-<footer class="wrap fuss">
+<footer class="wrap-breit fuss">
   <p>Nur für dich, über den direkten Link.</p>
 </footer>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titel">
+    <button type="button" class="modal-schliessen" id="modal-schliessen" aria-label="Rezept schliessen">&times;</button>
+    <div id="modal-inhalt"></div>
+  </div>
+</div>
 
 <script src="rezepte.js"></script>
 

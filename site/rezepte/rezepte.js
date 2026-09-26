@@ -11,13 +11,23 @@
   }
 
   function escHtml(s) {
-    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   }
 
-  function karte(r) {
+  function kachelHtml(r) {
+    var tags = r.tags.map(function (t) { return '<span class="kachel-tag">' + escHtml(label(t)) + '</span>'; }).join('');
+    return (
+      '<button type="button" class="kachel" data-tags="' + r.tags.join(' ') + '" data-id="' + r.id + '">' +
+      '<p class="kachel-titel">' + escHtml(r.titel) + '</p>' +
+      (tags ? '<div class="kachel-tags">' + tags + '</div>' : '') +
+      '</button>'
+    );
+  }
+
+  function detailHtml(r) {
     var hashtags = r.tags.map(function (t) { return '#' + t; }).join(' ');
     return (
-      '<article class="rezept" id="' + r.id + '" data-tags="' + r.tags.join(' ') + '">' +
+      '<article class="rezept" id="modal-titel">' +
       '<h2>' + escHtml(r.titel) + '</h2>' +
       (r.angaben ? '<p class="angaben">' + escHtml(r.angaben) + '</p>' : '') +
       (hashtags ? '<p class="hashtags">' + escHtml(hashtags) + '</p>' : '') +
@@ -35,21 +45,51 @@
     .then(function (res) { return res.json(); })
     .then(function (data) {
       var rezepte = data.rezepte || [];
-      var liste = document.getElementById('rezepte-liste');
+      var grid = document.getElementById('grid');
       var leer = document.getElementById('leer');
+      var overlay = document.getElementById('overlay');
+      var modalInhalt = document.getElementById('modal-inhalt');
 
       if (rezepte.length === 0) {
         leer.hidden = false;
         return;
       }
 
-      liste.innerHTML = rezepte.map(karte).join('');
+      var nachId = {};
+      rezepte.forEach(function (r) { nachId[r.id] = r; });
 
-      var inhalt = document.getElementById('inhalt');
-      inhalt.innerHTML = rezepte.map(function (r) {
-        return '<a href="#' + r.id + '">' + escHtml(r.titel) + '</a>';
-      }).join('');
-      inhalt.hidden = false;
+      grid.innerHTML = rezepte.map(kachelHtml).join('');
+
+      function oeffnen(id) {
+        var r = nachId[id];
+        if (!r) return;
+        modalInhalt.innerHTML = detailHtml(r);
+        overlay.hidden = false;
+        document.body.style.overflow = 'hidden';
+        history.replaceState(null, '', '#' + id);
+      }
+      function schliessen() {
+        overlay.hidden = true;
+        document.body.style.overflow = '';
+        history.replaceState(null, '', location.pathname);
+      }
+
+      grid.addEventListener('click', function (ev) {
+        var btn = ev.target.closest('.kachel');
+        if (btn) oeffnen(btn.getAttribute('data-id'));
+      });
+      document.getElementById('modal-schliessen').addEventListener('click', schliessen);
+      overlay.addEventListener('click', function (ev) {
+        if (ev.target === overlay) schliessen();
+      });
+      document.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Escape' && !overlay.hidden) schliessen();
+      });
+
+      if (location.hash) {
+        var id = location.hash.slice(1);
+        if (nachId[id]) oeffnen(id);
+      }
 
       var alleTags = [];
       rezepte.forEach(function (r) {
@@ -66,16 +106,16 @@
         filter.hidden = false;
 
         var buttons = Array.prototype.slice.call(filter.querySelectorAll('.filter-btn'));
-        var artikel = Array.prototype.slice.call(liste.querySelectorAll('.rezept'));
+        var kacheln = Array.prototype.slice.call(grid.querySelectorAll('.kachel'));
         var keineTreffer = document.getElementById('keine-treffer');
         var aktiv = [];
 
         function anwenden() {
           var sichtbar = 0;
-          artikel.forEach(function (a) {
-            var tags = (a.getAttribute('data-tags') || '').split(/\s+/);
+          kacheln.forEach(function (k) {
+            var tags = (k.getAttribute('data-tags') || '').split(/\s+/);
             var passt = aktiv.every(function (f) { return tags.indexOf(f) !== -1; });
-            a.hidden = !passt;
+            k.style.display = passt ? '' : 'none';
             if (passt) sichtbar++;
           });
           keineTreffer.hidden = sichtbar !== 0;
