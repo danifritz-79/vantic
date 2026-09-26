@@ -16,9 +16,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = ROOT / "skills"
+REZEPTE_DIR = ROOT / "rezepte"
 SITE_DIR = ROOT / "site"
 DIST = ROOT / "dist"
 SKILLS_OUT = DIST / "skills"  # Skills-Seite, skills.json und Downloads liegen unter /skills
+REZEPTE_OUT = DIST / "rezepte"  # Rezepte-Seite und rezepte.json liegen unter /rezepte
 IGNORE = {"site.json", ".DS_Store", "Thumbs.db"}
 
 
@@ -111,6 +113,114 @@ def build_skill(folder):
     }
 
 
+TITEL_RE = re.compile(r"^#{1,2}\s+(.*\S)\s*$")
+ANGABEN_RE = re.compile(r"^\*\*(Für .*)\*\*$", re.I)
+TAGS_RE = re.compile(r"^(#[\wäöüÄÖÜéèà-]+)(\s+#[\wäöüÄÖÜéèà-]+)*$")
+ABSCHNITT_RE = re.compile(r"^\*\*(Zutaten|Zubereitung|Notiz|Notizen|Hinweis)\*\*$", re.I)
+KOMPONENTE_RE = re.compile(r"^\*\*(.+)\*\*$")
+SCHRITT_RE = re.compile(r"^\d+\.\s+(.*)$")
+
+
+def esc(text):
+    return (
+        text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    )
+
+
+def gruppen_zu_html(zeilen, geordnet):
+    """Baut HTML aus Zeilen, die mit **Komponente**-Zwischentiteln gegliedert sind.
+    geordnet=True: nummerierte Schritte (Zubereitung). geordnet=False: Zutatenliste."""
+    html = []
+    offen = False
+    for raw in zeilen:
+        zeile = raw.strip()
+        if not zeile:
+            continue
+        m = KOMPONENTE_RE.match(zeile)
+        if m and not SCHRITT_RE.match(zeile):
+            if offen:
+                html.append("</ol>" if geordnet else "</ul>")
+                offen = False
+            html.append(f"<h4>{esc(m.group(1))}</h4>")
+            continue
+        inhalt = zeile
+        s = SCHRITT_RE.match(zeile)
+        if s:
+            inhalt = s.group(1)
+        if not offen:
+            html.append("<ol>" if geordnet else "<ul>")
+            offen = True
+        html.append(f"<li>{esc(inhalt)}</li>")
+    if offen:
+        html.append("</ol>" if geordnet else "</ul>")
+    return "".join(html)
+
+
+def parse_rezept(text):
+    """Liest ein Rezept im Format des rezept-creator Skills (Titel, **Für X Personen**,
+    optionale #hashtags, **Zutaten**/**Zubereitung**/**Notiz**, je mit **Komponente**-Titeln)."""
+    titel = None
+    angaben = ""
+    tags = []
+    abschnitt = None
+    zutaten_zeilen, zubereitung_zeilen, notiz_zeilen = [], [], []
+    for raw in text.replace("\r\n", "\n").split("\n"):
+        zeile = raw.strip()
+        if titel is None:
+            m = TITEL_RE.match(zeile)
+            if m:
+                titel = m.group(1)
+            continue
+        if not zeile:
+            continue
+        m = TAGS_RE.match(zeile)
+        if m:
+            tags = [t.lstrip("#").lower() for t in zeile.split()]
+            continue
+        m = ABSCHNITT_RE.match(zeile)
+        if m:
+            name = m.group(1).lower()
+            abschnitt = "zutaten" if name == "zutaten" else ("zubereitung" if name == "zubereitung" else "notiz")
+            continue
+        if abschnitt is None:
+            m = ANGABEN_RE.match(zeile)
+            if m and not angaben:
+                angaben = m.group(1)
+            continue
+        if abschnitt == "zutaten":
+            zutaten_zeilen.append(zeile)
+        elif abschnitt == "zubereitung":
+            zubereitung_zeilen.append(zeile)
+        else:
+            notiz_zeilen.append(zeile)
+    if not titel:
+        return None
+    return {
+        "titel": titel,
+        "angaben": angaben,
+        "tags": tags,
+        "zutaten_html": gruppen_zu_html(zutaten_zeilen, geordnet=False),
+        "zubereitung_html": gruppen_zu_html(zubereitung_zeilen, geordnet=True),
+        "notiz": " ".join(notiz_zeilen).strip(),
+    }
+
+
+def build_rezepte():
+    rezepte = []
+    if not REZEPTE_DIR.exists():
+        return rezepte
+    for datei in sorted(REZEPTE_DIR.glob("*.md")):
+        rezept = parse_rezept(datei.read_text(encoding="utf-8"))
+        if not rezept:
+            warn(f"{datei.name}: Kein Titel gefunden (erste Zeile mit # oder ##). Datei wird übersprungen.")
+            continue
+        slug = re.sub(r"[^a-z0-9]+", "-", rezept["titel"].lower()).strip("-") or datei.stem
+        rezept["id"] = slug
+        rezept["quelle"] = datei.name
+        rezepte.append(rezept)
+    return rezepte
+
+
 def main():
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -139,7 +249,14 @@ def main():
         json.dumps({"config": config, "kategorien": categories, "skills": skills}, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    print(f"Fertig: {len(skills)} Skill(s), {len(categories)} Kategorie(n) in {DIST}")
+    rezepte = build_rezepte()
+    REZEPTE_OUT.mkdir(parents=True, exist_ok=True)
+    (REZEPTE_OUT / "rezepte.json").write_text(
+        json.dumps({"rezepte": rezepte}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+    print(f"Fertig: {len(skills)} Skill(s), {len(categories)} Kategorie(n), {len(rezepte)} Rezept(e) in {DIST}")
     return 0
 
 
