@@ -2,6 +2,8 @@
 
 **Für eine Springform von 26 cm Durchmesser**
 
+#Vegetarisch #Dessert
+
 **Zutaten**
 
 315 g Mandelmasse (gekauft oder gemahlen, je zur Hälfte aus geschälten Mandeln und Zucker)
