@@ -2,6 +2,8 @@
 
 **Für ca. 8 Personen**
 
+#Hauptgang
+
 **Zutaten**
 
 1 Schweinebauch, ca. 2,2 kg
