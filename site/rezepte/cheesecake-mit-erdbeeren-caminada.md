@@ -1,5 +1,7 @@
 ## Cheesecake mit Erdbeeren by Andreas Caminada
 
+#Vegetarisch #Dessert
+
 **Zutaten**
 
 600 g Frischkäse
