@@ -1,6 +1,6 @@
 ## Forelle blau & Sauce Béarnaise by Andreas Caminada
 
-#Fisch
+#Fisch #Hauptgang
 
 **Zutaten**
 
