@@ -1,5 +1,7 @@
 ## Spargelflan by Andreas Caminada
 
+#Vegetarisch #Vorspeise
+
 **Zutaten**
 
 500 g weisse Spargeln
