@@ -2,6 +2,8 @@
 
 **Für 1-2 Personen**
 
+#Hauptgang #Geflügel
+
 **Zutaten**
 
 **Hähnchen**
