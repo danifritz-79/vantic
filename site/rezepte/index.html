@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rezepte</title>
+<link rel="stylesheet" href="rezepte.css">
+</head>
+<body>
+
+<header class="wrap kopf">
+  <h1>Rezepte</h1>
+  <p class="kopf-text">Eine private Sammlung, nicht Teil der Vantic Webseite und nirgends verlinkt.</p>
+</header>
+
+<main class="wrap">
+
+  <!--
+    Filter: Kategorien sind fest auf vorspeise, sauce, dessert, vegetarisch eingestellt.
+    Ein Rezept wird nur angezeigt, wenn es ALLE aktiven Filter als Hashtag trägt.
+  -->
+  <div class="filter" role="group" aria-label="Rezepte filtern">
+    <button type="button" class="filter-btn is-active" data-filter="alle">Alle</button>
+    <button type="button" class="filter-btn" data-filter="vorspeise">Vorspeisen</button>
+    <button type="button" class="filter-btn" data-filter="sauce">Saucen</button>
+    <button type="button" class="filter-btn" data-filter="dessert">Desserts</button>
+    <button type="button" class="filter-btn" data-filter="vegetarisch">Vegetarisch</button>
+  </div>
+
+  <nav class="inhalt" aria-label="Rezeptübersicht">
+    <a href="#basilikum-pesto">Basilikum-Pesto</a>
+  </nav>
+
+  <p class="keine-treffer" hidden>Kein Rezept mit dieser Kombination von Filtern.</p>
+
+  <!--
+    Neues Rezept hinzufügen:
+    1. Diesen ganzen <article class="rezept" id="..."> Block kopieren.
+    2. id, Titel, Angaben, Zutaten und Schritte anpassen.
+    3. data-tags mit den passenden Kategorien setzen (vorspeise, sauce, dessert, vegetarisch,
+       mehrere durch Leerzeichen getrennt, z. B. data-tags="sauce vegetarisch").
+    4. Die gleichen Hashtags im <p class="hashtags"> darunter aufführen, z. B. #sauce #vegetarisch.
+    5. Oben in der <nav class="inhalt"> einen Link mit #id und Titel ergänzen.
+    Hinweis für den Rezept-Skill: Kategorien bitte aus dieser festen Liste wählen
+    (vorspeise, sauce, dessert, vegetarisch), damit die Filter greifen. Ein Rezept kann
+    auch mehrere Hashtags gleichzeitig haben.
+  -->
+
+  <article class="rezept" id="basilikum-pesto" data-tags="sauce vegetarisch">
+    <h2>Basilikum-Pesto</h2>
+    <p class="angaben">Für 1 Glas &middot; 10 Minuten &middot; ohne Kochen</p>
+    <p class="hashtags">#sauce #vegetarisch</p>
+
+    <div class="rezept-grid">
+      <div class="zutaten">
+        <h3>Zutaten</h3>
+        <ul>
+          <li>1 Bund Basilikum</li>
+          <li>50 g Pinienkerne</li>
+          <li>50 g Parmesan, gerieben</li>
+          <li>1 Knoblauchzehe</li>
+          <li>100 ml Olivenöl</li>
+          <li>Salz, Pfeffer</li>
+        </ul>
+      </div>
+      <div class="zubereitung">
+        <h3>Zubereitung</h3>
+        <ol>
+          <li>Pinienkerne in einer Pfanne ohne Fett kurz anrösten.</li>
+          <li>Basilikum, Pinienkerne, Parmesan und Knoblauch grob hacken oder im Mixer pürieren.</li>
+          <li>Olivenöl langsam einrühren, bis eine cremige Konsistenz entsteht.</li>
+          <li>Mit Salz und Pfeffer abschmecken.</li>
+        </ol>
+        <p class="notiz">Notiz: hält sich im Kühlschrank etwa eine Woche, wenn oben mit einer dünnen Ölschicht abgedeckt.</p>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer class="wrap fuss">
+  <p>Nur für dich, über den direkten Link.</p>
+</footer>
+
+<script>
+(function () {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.filter-btn'));
+  var rezepte = Array.prototype.slice.call(document.querySelectorAll('.rezept'));
+  var keineTreffer = document.querySelector('.keine-treffer');
+  var aktiv = [];
+
+  function anwenden() {
+    var sichtbar = 0;
+    rezepte.forEach(function (r) {
+      var tags = (r.getAttribute('data-tags') || '').split(/\s+/);
+      var passt = aktiv.every(function (f) { return tags.indexOf(f) !== -1; });
+      r.hidden = !passt;
+      if (passt) sichtbar++;
+    });
+    keineTreffer.hidden = sichtbar !== 0;
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.getAttribute('data-filter');
+      if (f === 'alle') {
+        aktiv = [];
+        buttons.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+      } else {
+        document.querySelector('[data-filter="alle"]').classList.remove('is-active');
+        var i = aktiv.indexOf(f);
+        if (i === -1) { aktiv.push(f); btn.classList.add('is-active'); }
+        else { aktiv.splice(i, 1); btn.classList.remove('is-active'); }
+        if (aktiv.length === 0) document.querySelector('[data-filter="alle"]').classList.add('is-active');
+      }
+      anwenden();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
