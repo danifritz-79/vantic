@@ -2,6 +2,8 @@
 
 **Für eine Gugelhopf-Form von 22 cm Durchmesser**
 
+#Vegetarisch #Dessert
+
 **Zutaten**
 
 **Teig**
