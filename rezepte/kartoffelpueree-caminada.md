@@ -1,5 +1,7 @@
 ## Kartoffelpüree by Andreas Caminada
 
+#Vegetarisch
+
 **Zutaten**
 
 800 g mehlig kochende Kartoffeln
