@@ -1,6 +1,6 @@
 ## Kartoffelpüree by Andreas Caminada
 
-#Vegetarisch
+#Vegetarisch #Hauptgang
 
 **Zutaten**
 
