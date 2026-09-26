@@ -114,9 +114,9 @@ def build_skill(folder):
 
 
 TITEL_RE = re.compile(r"^#{1,2}\s+(.*\S)\s*$")
-ANGABEN_RE = re.compile(r"^\*\*(Für .*)\*\*$", re.I)
+ANGABEN_RE = re.compile(r"^\*{0,2}(Für [^*]*[^*\s])\*{0,2}$", re.I)
 TAGS_RE = re.compile(r"^(#[\wäöüÄÖÜéèà-]+)(\s+#[\wäöüÄÖÜéèà-]+)*$")
-ABSCHNITT_RE = re.compile(r"^\*\*(Zutaten|Zubereitung|Notiz|Notizen|Hinweis)\*\*$", re.I)
+ABSCHNITT_RE = re.compile(r"^(?:\*\*(Zutaten|Zubereitung|Notiz|Notizen|Hinweis)\*\*|#{1,3}\s*(Zutaten|Zubereitung|Notiz|Notizen|Hinweis))\s*$", re.I)
 KOMPONENTE_RE = re.compile(r"^\*\*(.+)\*\*$")
 SCHRITT_RE = re.compile(r"^\d+\.\s+(.*)$")
 
@@ -179,13 +179,14 @@ def parse_rezept(text):
             continue
         m = ABSCHNITT_RE.match(zeile)
         if m:
-            name = m.group(1).lower()
+            name = (m.group(1) or m.group(2)).lower()
             abschnitt = "zutaten" if name == "zutaten" else ("zubereitung" if name == "zubereitung" else "notiz")
             continue
+        m = ANGABEN_RE.match(zeile)
+        if m and not angaben:
+            angaben = m.group(1)
+            continue
         if abschnitt is None:
-            m = ANGABEN_RE.match(zeile)
-            if m and not angaben:
-                angaben = m.group(1)
             continue
         if abschnitt == "zutaten":
             zutaten_zeilen.append(zeile)
