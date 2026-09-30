@@ -137,6 +137,11 @@ p { margin: 0; }
 .about-linkedin:hover { background: rgba(226, 176, 74, 0.12); }
 .about-linkedin:focus-visible { outline-color: var(--gold); }
 
+/* Kontakt */
+.contact { background: var(--panel); border-radius: 16px; padding: 48px; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; text-align: left; }
+.contact h2 { font-size: 34px; font-weight: 600; letter-spacing: -0.02em; }
+.contact p { font-size: 18px; line-height: 1.55; color: var(--body); max-width: 36em; }
+
 .site-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; padding-bottom: 48px; font-family: var(--sans); font-size: 15px; color: #4B5750; }
 .site-footer nav { display: flex; gap: 24px; }
 .site-footer a { color: #4B5750; min-height: 44px; display: flex; align-items: center; }
@@ -167,5 +172,6 @@ p { margin: 0; }
   .about-grid { grid-template-columns: minmax(0, 1fr); row-gap: 24px; padding-top: 56px; padding-bottom: 56px; justify-items: center; text-align: center; }
   .about p { margin-left: auto; margin-right: auto; }
   .site-footer { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .contact { padding: 28px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
