@@ -2,6 +2,8 @@
 
 Für eine 22 cm Springform
 
+#Dessert
+
 ## Mürbeteig
 
 - 100 g Butter (kalt)
@@ -54,4 +56,3 @@ Alles über dem Wasserbad unter Rühren auf 65 bis 70 °C erhitzen und anschlies
 
 ---
 
-#Dessert
