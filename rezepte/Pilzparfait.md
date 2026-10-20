@@ -3,7 +3,7 @@ Für 8 bis 10 Personen (1 Kastenform)
 
 #Vegetarisch #Vorspeise
 
-Zutaten
+### Zutaten
 
 Portwein-Schalotten 375 g Ruby Port 40 g Wasser 170 g Schalotten
 
@@ -13,14 +13,12 @@ Parfait 340 g Pilzpüree 90 g Portwein-Schalotten 180 g Eier 200 g Butter, flüs
 
 Zum Anrichten 8 Scheiben Brioche (ca. 240 g) 40 g Butter 150 g Champignons, roh 20 g Gartenkresse Maldon-Salz
 
-Zubereitung
+### Zubereitung
 
-Portwein-Schalotten
-
+#### Portwein-Schalotten
 Schalotten fein schneiden.
 Mit Port und Wasser ohne Zucker mehrere Stunden bei kleiner Hitze einkochen, bis die Konsistenz an Marmelade erinnert.
-Pilzpüree
-
+#### Pilzpüree
 Pilze in Butter goldbraun rösten.
 Mit Sojasauce, Mirin und Rahm ablöschen, einkochen.
 Milch dazugeben, alles fein pürieren.
