@@ -1,0 +1,17 @@
+{
+  "titel": "Value Proposition Canvas",
+  "kategorie": "Strategie entwickeln",
+  "ebene": "strategie",
+  "reihenfolge": 35,
+  "kurzbeschreibung": "Erarbeitet Kundenprofil und Value Map für ein Kundensegment, gewichtet die Kundenbedürfnisse und prüft mit Häkchen und Kreuz, welche davon dein Wertangebot berücksichtigt.",
+  "einleitung": "Der Skill führt dich in drei Teilen durch den Value Proposition Canvas, den Baustein des Business Model Canvas für Kundensegment und Wertangebot. Zuerst sammelst du die Aufgaben, Probleme und Gewinne deiner Kunden und gewichtest sie. Dann beschreibst du die Value Map mit Produkten und Dienstleistungen, Problemlösern und Gewinnerzeugern. Zum Schluss zeigt die Übereinstimmung, welche Kundenbedürfnisse dein Angebot berücksichtigt und wo die wichtigsten Lücken liegen. Alle Resultate erhältst du als PowerPoint, und für die Arbeit im Workshop gibt es ein leeres Template zum Ausdrucken. Canvas nach Osterwalder, Pigneur, Bernarda und Smith, Value Proposition Design (Strategyzer).",
+  "punkte": [
+    "Sammelt Kundenaufgaben, Probleme und Gewinne und gewichtet sie von wichtig bis unbedeutend, gravierend bis gering und unverzichtbar bis nice to have",
+    "Liefert das gewichtete Kundenprofil als Zwischenresultat in drei Säulen",
+    "Erarbeitet die Value Map und stellt den ausgefüllten Canvas mit Quadrat und Kreis dar",
+    "Prüft die Übereinstimmung mit Häkchen und Kreuz und zeigt die wichtigsten Lücken und überflüssigen Elemente"
+  ],
+  "du_gibst": "Das Kundensegment und das Wertangebot, das du betrachten willst, dein Wissen über die Kunden und über dein Angebot",
+  "du_erhaeltst": "PowerPoint mit gewichtetem Kundenprofil, Value Map, ausgefülltem Canvas und Übereinstimmung, dazu Empfehlungen zum Schärfen des Angebots, oder ein leeres Template für den Workshop",
+  "beispielauftrag": "Ich möchte mein Workshop-Angebot für Geschäftsleitungen von KMU schärfen. Lass uns einen Value Proposition Canvas machen."
+}
