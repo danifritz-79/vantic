@@ -1,0 +1,17 @@
+{
+  "titel": "Strategy Co-Creation Canvas",
+  "kategorie": "Strategie entwickeln",
+  "ebene": "strategie",
+  "reihenfolge": 30,
+  "kurzbeschreibung": "Strukturiert eine strategische Entscheidung entlang einer Mensch-KI-Logik in sechs Feldern und erstellt daraus ein PowerPoint mit dem ausgefüllten Canvas.",
+  "einleitung": "Der Skill führt Claude Feld für Feld durch den Canvas: Zielbild, Stakeholder-Sicht, Datenbasis, KI-Rolle, Bewertungslogik und menschliche Verantwortung. So wird sichtbar, was die KI zu einer Entscheidung beitragen kann und was ihr bewusst selbst entscheidet. Willst du den Canvas lieber im Workshop von Hand ausfüllen, erhältst du einen leeren Canvas zum Ausdrucken, und Claude wertet die Ergebnisse danach mit dir aus. Am Ende prüft Claude die Felder auf Widersprüche, fasst einen Entscheidungsvorschlag mit nächsten Schritten zusammen und bietet den ausgefüllten Canvas als PowerPoint an. Der Canvas basiert auf Verena Fink, Künstliche Intelligenz in der Führungsarbeit (2026).",
+  "punkte": [
+    "Schärft die Entscheidungsfrage und führt durch die sechs Felder des Canvas",
+    "Trennt, was die KI weiss, von dem, was nur die Menschen wissen, und legt die Rolle der KI bewusst fest",
+    "Prüft die Felder gegeneinander, zum Beispiel ob die Datenbasis die geplante KI-Rolle trägt",
+    "Erstellt einen leeren Canvas zum Ausdrucken für den Workshop oder ein PowerPoint mit Titelfolie, ausgefülltem Canvas und Synthese"
+  ],
+  "du_gibst": "Die strategische Entscheidung, die ansteht, wer entscheidet und bis wann, sowie dein Wissen zu Zielen, Betroffenen, Daten und Kriterien",
+  "du_erhaeltst": "Leeren Canvas für den Workshop oder ausgefüllten Canvas als Text und PowerPoint, dazu Konsistenzprüfung, Entscheidungsvorschlag, offene Punkte und nächste Schritte mit Verantwortlichen",
+  "beispielauftrag": "Wir überlegen, ob wir unseren Kundendienst auf ein KI-gestütztes Erstantwort-Modell umstellen. Hilf mir, die Entscheidung mit dem Strategy Co-Creation Canvas vorzubereiten."
+}

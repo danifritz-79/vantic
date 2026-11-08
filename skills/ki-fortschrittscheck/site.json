@@ -1,6 +1,7 @@
 {
   "titel": "KI-Fortschrittscheck",
   "kategorie": "Mitarbeitende entwickeln",
+  "ebene": "mensch",
   "reihenfolge": 20,
   "kurzbeschreibung": "Überprüft periodisch den Fortschritt einer Organisation gegenüber ihrer bestehenden KI-Kompetenzmatrix und lässt keine Anpassung des Modells ohne dokumentierte Überprüfung zu.",
   "einleitung": "Der Skill baut auf einer bestehenden Kompetenzmatrix aus dem Skill ki-kompetenzmodell auf. Er vergleicht die aktuellen Ist-Stufen mit den festgelegten Sollstufen, macht Fortschritt, Lücken und Blocker pro Rolle sichtbar und dokumentiert alles in einem Fortschrittsbericht. Eine Anpassung an Sollstufen, Rollen, Kompetenzfeldern oder Lernpfaden ist erst möglich, wenn dieser Bericht vorliegt.",
