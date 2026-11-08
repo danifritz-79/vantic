@@ -1,0 +1,17 @@
+{
+  "titel": "Leadership Future Skill Check-in",
+  "kategorie": "Führung entwickeln",
+  "ebene": "mensch",
+  "reihenfolge": 40,
+  "kurzbeschreibung": "Reflektiert deine Kompetenzen als Führungskraft in vier Kernbereichen, gleicht dein Selbstbild in einer 360-Grad-Feedbackrunde mit der Wahrnehmung anderer ab und zeigt beides in einem Spider-Diagramm.",
+  "einleitung": "Der Skill führt dich in zwei Phasen durch den Check-in. Zuerst schätzt du dich in 16 Teilaspekten aus Eigenorganisation, Tech-Affinität, Business-Verständnis und soziokulturellem Gespür ein, jeweils mit Ist und Soll. Danach holst du mit einem fertigen Fragebogen Feedback von Vorgesetzten, Peers und Mitarbeitenden ein. Die Fremdeinschätzungen trägst du in ein Excel-Profil ein, und das Spider-Diagramm zeigt sofort, wo Selbst- und Fremdbild übereinstimmen, wo blinde Flecken liegen und welche Stärken du unterschätzt. Daraus leitest du höchstens zwei Entwicklungsfelder mit konkreten Schritten ab.",
+  "punkte": [
+    "Reflektiert 16 Teilaspekte in vier Kernbereichen mit Fragen und konkreten Beispielen aus deinem Alltag",
+    "Bereitet eine 360-Grad-Feedbackrunde vor, mit Einladung, Fragebogen und klaren Regeln zur Anonymität",
+    "Zeigt Selbsteinschätzung, Soll und Fremdeinschätzung in einem Spider-Diagramm, als PowerPoint und in einem Excel-Profil, das sich beim Eintragen automatisch aktualisiert",
+    "Macht blinde Flecken und verborgene Stärken sichtbar und leitet höchstens zwei Entwicklungsfelder mit konkreten Schritten ab"
+  ],
+  "du_gibst": "Deine heutige Rolle, was in den nächsten ein bis zwei Jahren auf sie zukommt, ehrliche Antworten mit Beispielen aus deinem Alltag und, für Phase 2, die Rückmeldungen aus der Feedbackrunde",
+  "du_erhaeltst": "Spider-Diagramm als PowerPoint und Excel-Profil mit Selbst- und Fremdbild, Feedback-Fragebogen samt Einladung, Auswertung mit blinden Flecken und verborgenen Stärken, Entwicklungsschritte mit Terminen",
+  "beispielauftrag": "Ich leite seit einem Jahr ein Team von zwölf Personen, und KI verändert unsere Arbeit gerade stark. Mach mit mir einen Leadership Future Skill Check-in mit 360-Grad-Feedback."
+}
