@@ -1,0 +1,17 @@
+{
+  "titel": "KI-Jobprofil-Designer",
+  "kategorie": "Rollen und Jobprofile",
+  "ebene": "organisation",
+  "reihenfolge": 50,
+  "kurzbeschreibung": "Gestaltet ein bestehendes Jobprofil für die Zusammenarbeit mit KI neu: Welche Aufgaben übernimmt die KI, welche unterstützt sie, welche bleiben beim Menschen, und was kommt neu dazu.",
+  "einleitung": "Der Skill zerlegt eine Rolle in ihre Aufgaben mit Zeitanteilen und stuft jede Aufgabe nach klaren Kriterien ein: KI übernimmt, KI unterstützt oder bleibt beim Menschen. Daraus berechnet er, wie viel Zeit frei wird, und leitet mit dir neue, wertvollere Aufgaben ab. Am Ende steht ein neues Rollenprofil mit Zweck, Verantwortungen, Entscheidungsbefugnissen, Kompetenzen und einem Plan für den Übergang. Du erhältst alles als PowerPoint mit Vorher-Nachher-Ansicht und als Excel, in dem du Anteile und Einstufungen selbst nachjustieren kannst.",
+  "punkte": [
+    "Zerlegt die Rolle in Aufgaben mit Zeitanteilen und stuft jede Aufgabe nach acht Kriterien ein",
+    "Zeigt, wie sich die Arbeitszeit verschiebt, und macht freie Kapazität oder Überbuchung sichtbar",
+    "Leitet neue Aufgaben, Verantwortungen, Entscheidungsbefugnisse und Kompetenzen für die künftige Rolle ab",
+    "Liefert PowerPoint mit Vorher-Nachher-Ansicht und Excel zum Nachjustieren, passend zum KI-Kompetenzmodell"
+  ],
+  "du_gibst": "Die Rolle, die du neu gestalten willst, ihre heutigen Aufgaben mit ungefähren Zeitanteilen, und dein Wissen darüber, wie die Arbeit im Alltag aussieht",
+  "du_erhaeltst": "Neues Rollenprofil, Aufgabenanalyse mit Einstufung, Zeitverteilung heute und künftig, Übergangsplan, als PowerPoint und Excel",
+  "beispielauftrag": "Unsere Sachbearbeitung im Offertwesen verbringt viel Zeit mit Standardofferten. Hilf mir, das Jobprofil mit Blick auf KI neu zu gestalten."
+}
