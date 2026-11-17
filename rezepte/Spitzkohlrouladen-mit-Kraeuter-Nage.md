@@ -4,6 +4,8 @@
 
 **Für 2 Personen (4 Rouladen)**
 
+#Hauptgang #Vegetarisch
+
 **Zutaten**
 
 **Spitzkohlblätter**
