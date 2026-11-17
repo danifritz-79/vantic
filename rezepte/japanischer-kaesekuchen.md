@@ -2,6 +2,8 @@
 
 **Für 1 Kuchen**
 
+#Dessert
+
 **Zutaten**
 
 **Käsemasse**
