@@ -4,6 +4,8 @@
 
 **Für 4 Personen**
 
+#Vorspeise #Vegetarisch
+
 **Zutaten**
 
 **Gerösteter Kürbis**
